@@ -1,0 +1,60 @@
+<head>
+    <title>finance-manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Finance Manager</h1>
+    <p class="subtitle">Track your income, expenses and savings efficiently</p>
+
+    <div class="balance">
+        <h2>Balance: ₹<span id="balance">0</span></h2>
+    </div>
+
+    <div class="summary">
+        <div class="income-box">
+            <h3>Income</h3>
+            ₹<span id="income">0</span>
+        </div>
+        <div class="expense-box">
+            <h3>Expense</h3>
+            ₹<span id="expense">0</span>
+        </div>
+    </div>
+
+    <form id="transaction-form">
+
+        <input type="text" id="desc" placeholder="Description" required>
+        <input type="date" id="date" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <select id="category">
+            <option value="grocery">Grocery</option>
+            <option value="shopping">Shopping</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="home_loan">Home Loan</option>
+            <option value="personal_loan">Personal Loan</option>
+            <option value="investments">Investments</option>
+        </select>
+
+        <button type="submit">Add Transaction</button>
+
+    </form>
+
+    <h3 style="margin-top: 20px;">Recent Transactions</h3>
+    <ul id="list"></ul>
+
+</div>
+
+<!-- Chatbot Button -->
+<button class="chatbot-btn" title="Ask AI Assistant">💬</button>
+
+<script src="script.js"></script>
+</body>
